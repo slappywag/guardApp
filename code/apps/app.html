@@ -1,3 +1,36 @@
-<div class="view">
-	<h1>App view!</h1>
+<div class="view app-view">
+	<div class="row">
+		<header class="col s12 header">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m4 posh-m1">
+                        <img src="apps/images/iphone.png" alt="">
+                        <img class="iphone-img" ng-repeat="img in images" ng-show="btn-select === active" src="apps/images/{{img}}.png" alt="{{img.alt}}">
+                    </div>
+                    <div class="col s12 m6 push-m1">
+                        <div class="section">
+                        	<p ng-repeat="b in buttons" class="btn-select" ng-click="set($index)" ng-class="{active: btnSelect === $index}" ng-bind="b"></p>
+                        </div>
+                        <div class="section">
+                            <a href="https://itunes.apple.com/us/app/netflix/id363590051?mt=8" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="col s12 icons block">
+            <div class="container">
+                <div class="row">
+                    <!-- <h2>Get the App:</h2> -->
+                    <div class="col s6 m3" ng-repeat="icon in icons">
+                        <div class="icon" >
+                            <i class="material-icons">{{icon.icon}}</i>
+                            <p ng-bind="icon.text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<ga-footer></ga-footer>
 </div>

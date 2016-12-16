@@ -258,17 +258,15 @@ textarea.materialize-textarea:focus:not([readonly])+label {
 .products-view {
     header {
         height: 94vh;
-        // background: $grey-light;
-
         .container {
             padding: 20vh 0;
         }
-
-        img {
-            // background: grey;
-            // height: 60vh;
-            width: 100%;
+        h1 {
+            color: white;
+            font-weight: normal;
         }
+        background: grey url('images/cmra.png') no-repeat left;
+        background-size: cover;
     }
     .icons {
         background: $black;
@@ -276,9 +274,9 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     .icon {
         i {
             width: 100%;
-            font-size: 100px;
+            font-size: 60px;
             text-align: center;
-            color: white; 
+            color: white;
         }
         p {
             color: white;
@@ -292,6 +290,9 @@ textarea.materialize-textarea:focus:not([readonly])+label {
         h1 {
             margin-top: 80px;
         }
+        &.darker {
+            background: $grey-light;
+        }
     }
     .conditions {
         background: $black;
@@ -303,7 +304,50 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     }
 }
 
+.app-view {
+    header {
+        // height: 94vh;
+        .container {
+            padding: 15vh 0 0 0;
+        }
+        img {
+            width: 100%;
+        }
+        .btn-select {
+            padding: 20px;
+            border: 1px solid $grey-mid;
+            cursor: pointer;
+            border-radius: 5px;
 
+            &.active {
+                border: 1px solid #329FEC;
+                outline: none;
+            }
+        }
+        .iphone-img {
+
+        }
+    }
+    .icons {
+        background: $light-blue;
+        h2 {
+            color: white;
+            text-align: center;
+        }
+    }
+    .icon {
+        i {
+            width: 100%;
+            font-size: 60px;
+            text-align: center;
+            color: white;
+        }
+        p {
+            color: white;
+            text-align: center;
+        }
+    }
+}
 
 // -------------------------------
 //      Media Queries
