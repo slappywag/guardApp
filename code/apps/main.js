@@ -15,6 +15,10 @@
 
 		$scope.array = new Array(12);
 
+		$( document ).ready(function() {
+          $('.button-collapse').sideNav();
+        });
+
 	});
 
 }) ();

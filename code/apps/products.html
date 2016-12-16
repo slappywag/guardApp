@@ -1,5 +1,71 @@
-<div class="view">
-
-	<h1>PRODUCTS VIEW!</h1>
-	
+<div class="view products-view">
+    <div class="row">
+        <header class="col s12 header">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m5">
+                        <img src="apps/images/camera-new.jpg" alt="">
+                    </div>
+                    <div class="col s12 m6 push-m1">
+                        <h1>
+                            Our cameras can be adapted and tailored to fit into any situation and any weather condition.
+                        </h1>
+                        <div class="section button">
+                            <a class="waves-effect waves-dark btn-flat">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="col s12 icons block">
+            <div class="container">
+                <div class="row">
+                    <div class="col s6 m3" ng-repeat="icon in icons">
+                        <div class="icon" >
+                            <i class="material-icons">{{icon.icon}}</i>
+                            <p ng-bind="icon.text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 information block">
+            <div class="container">
+                <div class="row">
+                    <div class="section">
+                        <div class="col s12 m3 push-m2">
+                            <img src="apps/images/iphone.png" alt="">
+                        </div>
+                        <div class="col s12 m6 push-m3">
+                            <h1>Motion activated cameras send pictures directly to your phone.</h1>
+                            <!-- <p>some text telling you what these do</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="section">
+                        <div class="col s12 m6 push-m1">
+                            <h1 class="text-right">Built in license plate recognition software allows for easier tracking of perpetrators.</h1>
+                            <!-- <p class="text-right">some text telling you what these do</p> -->
+                        </div>
+                        <div class="col s12 m3 push-m2">
+                            <img src="apps/images/iphone.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 conditions block">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <ul>
+                            <li ng-repeat="c in conditions"><p ng-bind="c"></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ga-footer></ga-footer>
 </div>

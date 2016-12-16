@@ -1,102 +1,329 @@
 // -------------------------------
-// 		imports
+//      imports
 // -------------------------------
 @import "code/base/vars";
 @import "code/apps/normalize";
-
-
 // -------------------------------
-// 		general
+//      general
 // -------------------------------
-
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .center {
-	position: absolute;
-	left: 0; right: 0; top: 0; bottom: 0;
-	margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .view {
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	top: 60px;
-	background: $white;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    background: $white;
 }
 
 nav {
-	background: $green;
+    // background: $green;
+    background: rgba(0, 168, 107, 0.9);
+    text-transform: capitalize;
+    box-shadow: none;
 }
 
 h1 {
-	font-size: 3.5em;
-	margin: 20px 0;
-	line-height: 1.6em;
+    font-size: calc(20px + 1.5vw);
+    margin: 20px 0;
+    line-height: 1.6em;
 }
+
+h2 {
+    font-size: calc(16px + 1vw);
+    margin: 20px 0;
+    line-height: 1.6em;
+}
+
 p {
-	font-size: 1.5em;
-	margin-top: 20px;
-	line-height: 1.5em;
+    font-size: calc(14px + 0.6vw);
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+.text-right {
+    text-align: right;
+}
+
+footer {
+    padding: 30px 0;
+    text-transform: capitalize;
+    // background: $grey-light;
+    a {
+        text-decoration: none;
+        font-style: none;
+        color: $light-blue;
+        line-height: 30px;
+    }
+    .brand-logo {
+        font-size: calc(20px + 1vw);
+        color: $green;
+    }
+}
+
+$colors: $black,
+$green,
+$light-blue,
+$dark-blue;
+.background {
+    &.black {
+        background: $black;
+    }
+    &.blue {
+        background: $light-blue
+    }
 }
 
 // -------------------------------
-// 		grid
+//      Cards
 // -------------------------------
+.ga-card {
+    background: $light-blue;
+    overflow: hidden;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 0 10px;
+    .img {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        opacity: 0.5;
+    }
+    p {
+        margin: 0 20px !important;
+    }
+    .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        white-space: nowrap;
+        line-height: 20px;
+        height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+}
+
+// -------------------------------
+//      grid
+// -------------------------------
+.container {
+    // outline: 1px solid blue;
+}
 
 .section {
-	a {
-		display: table;
-		margin: 0 auto;
-		line-height: 50px;
-		background: $light-blue;
-	}
+    a {
+        display: table;
+        margin: 0 auto;
+        line-height: 50px;
+        background: $light-blue;
+    }
 }
 
 .col {
-	// outline: 1px solid red;
+    // outline: 1px solid red;
+}
+
+.block {
+    padding: 80px 0 50px 0 !important;
 }
 
 // -------------------------------
-// 		sections
+//      input
 // -------------------------------
-
-.header {
-	height: 90vh;
-	background: lightgrey;
-
-	h1 {
-		font-size: 6vw;
-		margin-top: 200px;
-		text-align: center;
-		line-height: 1.2em;
-	}
+.input-white {
+    color: white;
+    border-bottom: 1px solid white !important;
 }
 
-.introduction {
-	padding: 100px 0 150px 0 !important;
-
-	img {
-		height: 300px;
-		background: grey;
-		width: 100%;
-		height: 100%;
-	}
+.input-field label {
+    color: #8E929F;
 }
 
-.products {
-	background: $black;
-	padding: 100px 0 150px 0 !important;
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:focus:not([readonly])+label,
+input[type=password]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label,
+input[type=url]:focus:not([readonly])+label,
+input[type=time]:focus:not([readonly])+label,
+input[type=date]:focus:not([readonly])+label,
+input[type=datetime]:focus:not([readonly])+label,
+input[type=datetime-local]:focus:not([readonly])+label,
+input[type=tel]:focus:not([readonly])+label,
+input[type=number]:focus:not([readonly])+label,
+input[type=search]:focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #8E929F;
+}
 
-	h1, p {
-		color: $white;
-	}
+// -------------------------------
+//      pages
+// -------------------------------
+.main-view {
+    .header {
+        height: 94vh;
+        background: $black;
+        background: grey url('images/main.png') no-repeat fixed left;
+        background-size: cover;
+        h1 {
+            font-size: calc(40px + 3vw);
+            margin-top: 200px;
+            text-align: center;
+            line-height: 1.2em;
+            color: white;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+        .button {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 150px;
+            .btn-flat {
+                background: none;
+                border: 2px solid white;
+                color: white;
+            }
+        }
+    }
+    .introduction {
+        img {
+            background: grey;
+            width: 100%;
+        }
+    }
+    .products {
+        background: $black;
+        h1,
+        p {
+            color: $white;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 50px;
+        }
+        .main-img {
+            width: 70%;
+            display: table;
+            margin: 0 auto;
+        }
+        .card {
+            margin-top: 60px;
+            background-color: $green;
+            border: 1px solid rgba(160, 160, 160, 0.5);
+        }
+    }
+    .about {
+        img {
+            width: 100%;
+        }
+        h2 {
+            border-bottom: 1px solid #61636C;
+        }
+        p {
+            margin-bottom: 40px;
+            font-size: calc(14px + 0.3vw);
+        }
+    }
+    .contact {
+        background: $grey-dark;
+        // background: $dark-blue;
+        h1 {
+            color: white;
+        }
+    }
+}
+
+// products
+.products-view {
+    header {
+        height: 94vh;
+        // background: $grey-light;
+
+        .container {
+            padding: 20vh 0;
+        }
+
+        img {
+            // background: grey;
+            // height: 60vh;
+            width: 100%;
+        }
+    }
+    .icons {
+        background: $black;
+    }
+    .icon {
+        i {
+            width: 100%;
+            font-size: 100px;
+            text-align: center;
+            color: white; 
+        }
+        p {
+            color: white;
+            text-align: center;
+        }
+    }
+    .information {
+        img {
+            width: 100%;
+        }
+        h1 {
+            margin-top: 80px;
+        }
+    }
+    .conditions {
+        background: $black;
+        color: white;
+        p {
+            font-size: calc(10px + 0.4vw);
+            margin-top: 0;
+        }
+    }
 }
 
 
 
+// -------------------------------
+//      Media Queries
+// -------------------------------
+@media (min-width: 992px) {}
 
+@media (max-width: 992px) {
+    .introduction {
+        img {
+            max-height: 200px;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .introduction {
+        img {
+            max-height: 200px;
+            overflow: hidden;
+        }
+    }
+}
